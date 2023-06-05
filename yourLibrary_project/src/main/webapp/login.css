@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: MapoDacapo;
+    font-style: 'normal';
+    src: url("../font/MapoDacapo.ttf")
+}
+
+@font-face{
+	font-family: TAEBAEK;
+	font-style: 'normal';
+	src : url("../font/TAEBAEK milkyway.ttf")
+}
+
+body {
+	background-color: #262A2D;
+	text-align: center;
+}
+
+.Gpont {
+	color: #ffd700;
+	font-style: italic;
+	font-family:MapoDacapo
+}
+
+.intro_font{
+	color: white;
+	font-family:TAEBAEK;
+}
+
+.intro_div{
+  width : 400px;
+  height: auto;
+  border: 1px solid #ffd700;
+  display: inline-block;
+  text-align: center;
+}
+
+.input_st{
+	width: 300px;
+	height: 50px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 3px solid #ffd700;
+	background-color: #262A2D;
+	color: #ffd700;
+}
+
+.form_st{
+	margin: auto;
+	text-align: center;
+}
+
+.remember_st{
+	display:inline;
+	font-family:TAEBAEK;
+	color: #ffd700;
+}
+
+input::placeholder {
+	color:#cccccc;
+}
+
+input::focus{
+	background-color: #262A2D;
+}

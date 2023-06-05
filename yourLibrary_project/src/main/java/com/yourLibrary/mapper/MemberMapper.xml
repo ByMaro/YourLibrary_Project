@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yourLibrary.mapper.MemberMapper">
+<resultMap type="com.yourLibrary.domain.MemberVO" id="memberMap">
+	<id property="userid" column="userid"/>
+	<result property="userid" column="userid"/>
+	<result property="userpw" column="userpw"/>
+	<result property="userName" column="username"/>
+	<result property="regDate" column="regdate"/>
+	<result property="email" column="email"/>
+	<collection property="authList" resultMap="authMap"></collection>
+</resultMap>
+
+<resultMap type="com.yourLibrary.domain.AuthVO" id="authMap">
+<result property="userid" column="userid"/>
+<result property="auth" column="authority"/>
+</resultMap>
+
+
+<select id = "read" resultMap="memberMap">
+select
+	mem.userid, userpw, username, enabled, regdate, email, authority
+from 
+	tbl_member mem left outer join tbl_member_auth auth on mem.userid = auth.userid
+where
+	mem.userid = #{userid}
+
+</select>
+
+<insert id="join_member">
+	insert into tbl_member(userid, userpw, username, email) 
+	values (#{userid},#{userpw},#{userName},#{email})
+</insert>
+
+<insert id="join_member_auth">
+	insert into tbl_member_auth(auth_index_no ,userid, authority) values (tbl_auth_index_no.nextval,#{userid},#{auth})
+</insert>
+
+
+</mapper>
