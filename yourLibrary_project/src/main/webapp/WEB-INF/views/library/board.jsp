@@ -10,8 +10,12 @@
 </head>
 <body>
 
+<header>
+	<script>loadHTML("header.html");</script>
+</header>
+
 <div>
-<table id ="" >
+<table id ="board_list">
 </table>
 </div>
 
@@ -24,9 +28,13 @@
 			type : "get",
 			dataType : "json",
 			success : function(data){
+				var str = ""
 				$.each(data, function(index, item){
-					console.log("bno : "+item.board_index)
+					str +="<tr>";
+					str +="<td>"+item.title+"</td>";
+					str +="</tr>";
 				})
+				$("#board_list").html(str);
 			}
 		})
 		

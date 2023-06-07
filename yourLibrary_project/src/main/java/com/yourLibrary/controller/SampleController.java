@@ -59,7 +59,7 @@ public class SampleController {
 		mvo.setEmail(vo.getEmail());
 
 		AuthVO avo = new AuthVO();
-		avo.setAuth("ROLE_MEMBER");
+		avo.setAuth("ROLE_ADMIN");
 		avo.setUserid(vo.getUserid());
 
 		memberservice.joinMember(mvo, avo);
