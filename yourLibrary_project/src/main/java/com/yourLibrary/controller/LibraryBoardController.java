@@ -38,13 +38,13 @@ public class LibraryBoardController {
 		System.out.println("this library board");
 	}
 
+	@RequestMapping("/header")
+	public void header() {}
+	
 	@ResponseBody
 	@GetMapping("/boardAllUser")
 	public List<boardVO> selectUserAllBoard(Principal p) {
 		return bService.boardSelectUserAll(p.getName());
 	}
-	
-	@GetMapping("/header")
-	public void header() {}
 
 }

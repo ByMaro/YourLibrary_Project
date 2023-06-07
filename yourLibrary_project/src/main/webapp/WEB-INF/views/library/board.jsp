@@ -10,9 +10,8 @@
 </head>
 <body>
 
-<header>
-	<script>loadHTML("header.html");</script>
-</header>
+<div id='header'></div>
+
 
 <div>
 <table id ="board_list">
@@ -37,8 +36,12 @@
 				$("#board_list").html(str);
 			}
 		})
-		
 	)
+	
+	$(function(){
+		$("#header").load("header.html");
+	})
+	
 </script>
 
 </html>

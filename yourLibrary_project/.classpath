@@ -35,7 +35,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/han68/Downloads/sqldeveloper-23.1.0.097.1607-x64/sqldeveloper/jdbc/lib/ojdbc11.jar">
+	<classpathentry kind="lib" path="C:/oracle/WINDOWS.X64_193000_db_home/jdbc/lib/ojdbc8.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
